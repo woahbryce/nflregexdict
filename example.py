@@ -36,10 +36,10 @@ def main():
     'Philadelphia Eagles', 'Eagles', 'Philly eagles']
     df = pd.DataFrame(np.arange(10000), columns=['team_entry']).applymap(lambda x: np.random.choice(example_list))
 
-    df['team_corrected'] = df.team_entry.apply(parse)
+    df['teams'] = df.team_entry.apply(parse)
     '''
     print(df.head())
-                 team_entry        team_corrected
+                 team_entry        teams
     0                  Pats  New England Patriots
     1               packers     Green Bay Packers
     2  New Englang Patriots  New England Patriots
