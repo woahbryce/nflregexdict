@@ -15,8 +15,7 @@ def parse(input_str):
         '[Philadey]*\s?Eagles?': 'Philadelphia Eagles'
     }
 
-    _ = list(nfl_teams_dict.keys())
-    dictkeys_pattern = re.compile('|'.join(list(_)), re.IGNORECASE)
+    dictkeys_pattern = re.compile('|'.join(nfl_teams_dict), re.IGNORECASE)
 
     #If string is found in the pattern, match to key in the dictionary and return corresponding value.
     team_found = re.findall(dictkeys_pattern, input_str)
