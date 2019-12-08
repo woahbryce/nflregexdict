@@ -11,8 +11,7 @@ The code in example.py matches multiple groups and returns a list. If you are on
 residing state), the following is more succint and uses one less for-loop, re.findall vs re.search, and returns a string rather than a
 list of values. 
 
-    _ = list(nfl_teams_dict.keys())
-    dictkeys_pattern = re.compile('|'.join(list(_)), re.IGNORECASE)
+    dictkeys_pattern = re.compile('|'.join(nfl_teams_dict), re.IGNORECASE)
 
     #If string is found in the pattern, match to key in the dictionary and return corresponding value.
     team_found = re.search(dictkeys_pattern, input_str)
